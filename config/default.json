@@ -1,0 +1,14 @@
+{
+	"app": {
+		"name": "soteria",
+		"port": "8080"
+	},
+	"origin": {
+		"host": "localhost",
+		"port": "7070"
+	},
+	"candidate": {
+		"host": "localhost",
+		"port": "7071"	
+	}
+}
