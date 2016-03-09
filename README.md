@@ -9,10 +9,12 @@ Enables quick regression testing by comparing test responses from new system aga
 
 This is still very experimental. Use at your own risk
 
-### TODO
+#### TODO
 
 Test other http methods
+
 Add request timing info
+
 Enable configuration of proportion of request to route to candidate
 
 Cleaner way to stop server?
