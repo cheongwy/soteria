@@ -22,6 +22,8 @@ var testReqOptions = {
 	headers: {'Content-Type':'application/json'}
 };
 
+var requestLogPath = 'request.log';
+
 var server;
 
 exports.setup = function(test) {
@@ -34,7 +36,7 @@ exports.setup = function(test) {
 
 exports.test1 = {
     setUp: function(callback) {
-    	emptyLogs('request.log', function() {
+    	emptyLogs(requestLogPath, function() {
     		callback();
     	});
     },
@@ -105,6 +107,7 @@ function verifyBasePath(test) {
 
 function verifyLogData(test) {
 	readLogData(function(lines){
+		console.log(lines);
 		test.ok(lines);
 		test.equal(2,lines.length);
 		test.ok(lines[0].soteria.data);
@@ -116,7 +119,7 @@ function verifyLogData(test) {
 
 function readLogData(callback) {
 	var lines = [];
-	lineReader.eachLine('request.log', function(line, last) {
+	lineReader.eachLine(requestLogPath, function(line, last) {
 		lines.push(JSON.parse(line));
 		if (last) {
 			callback(lines);
