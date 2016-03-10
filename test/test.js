@@ -107,7 +107,6 @@ function verifyBasePath(test) {
 
 function verifyLogData(test) {
 	readLogData(function(lines){
-		console.log(lines);
 		test.ok(lines);
 		test.equal(2,lines.length);
 		test.ok(lines[0].soteria.data);
@@ -119,11 +118,14 @@ function verifyLogData(test) {
 
 function readLogData(callback) {
 	var lines = [];
-	lineReader.eachLine(requestLogPath, function(line, last) {
+	lineReader.eachLine(requestLogPath, function(line, last, lineCallback) {
 		lines.push(JSON.parse(line));
 		if (last) {
+			lineCallback(false);
 			callback(lines);
-			return false;
+		}
+		else {
+			lineCallback();
 		}
 	});
 }
