@@ -1,4 +1,4 @@
-## Soteria
+# Soteria
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
 [![Build Status](https://travis-ci.org/cheongwy/soteria.svg?branch=master)](https://travis-ci.org/cheongwy/soteria)
