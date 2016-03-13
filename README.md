@@ -56,6 +56,8 @@ Test other http methods
 
 Add request timing info
 
+Replace  mock_server with json-server
+
 Enable configuration of proportion of request to route to candidate
 
 Cleaner way to stop server?
