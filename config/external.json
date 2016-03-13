@@ -1,0 +1,13 @@
+{
+	"app": {
+		"name": "soteria",
+		"port": "8080"
+	},
+	"origin": {
+		"host": "jsonplaceholder.typicode.com"
+	},
+	"candidate": {
+		"host": "jsonplaceholder.typicode.com",
+		"port": "80"	
+	}
+}
